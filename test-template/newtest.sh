@@ -6,9 +6,7 @@ cd ~/cs161/os161/userland/testbin/
 TESTNAME=$1
 mkdir $TESTNAME || exit
 sed "s/<testname>/$TESTNAME/g" $TEMPLATES/test.c.template > "$TESTNAME/$TESTNAME.c"
-sed "s/<testname>/$TESTNAME/g" $TEMPLATES/test-Makefile.template > "$TESTNAME/Makefile"
+sed "s/<testname>/$TESTNAME/g" $TEMPLATES/Makefile.template > "$TESTNAME/Makefile"
 
 # Update makefile
-echo "$TESTNAME" >> tests.txt
-DIRS=`cat tests.txt | tr '\n' '\ '`
-sed "s/<dirs>/$DIRS/g" $TEMPLATES/top-Makefile.template > Makefile
+echo "$TESTNAME \\" >> tests.mk
