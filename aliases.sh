@@ -58,6 +58,7 @@ alias kg='cd ~/cs161/root && os161-gdb kernel'
 alias kgdb=kg
 alias ub='os161-user-build'
 alias ubuild=ub
+alias nt="$CS161_BASHRC_DIR/test-template/newtest.sh"
 
 # Aliases to move to common directories
 alias cdk='cd $HOME/cs161/os161'

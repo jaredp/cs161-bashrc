@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+/*
+ * <testname>.c silly test
+ */
+
+int
+main(void)
+{
+	printf("allo!\n");
+}
